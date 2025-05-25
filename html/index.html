@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Blackmarket</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="blackmarket-ui" class="hidden">
+        <div class="container">
+            <div class="header">
+                <h1><i class="fas fa-skull"></i> Alpha Blackmarket</h1>
+                <button class="close-btn" onclick="closeUI()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showTab('items')">
+                    <i class="fas fa-tools"></i> Items
+                </button>
+                <button class="tab-btn" onclick="showTab('weapons')">
+                    <i class="fas fa-gun"></i> Weapons
+                </button>
+            </div>
+
+            <div id="items-tab" class="tab-content active">
+                <div class="search-bar">
+                    <input type="text" id="items-search" placeholder="Search items..." onkeyup="filterItems('items')">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="items-grid" id="items-container">
+                </div>
+            </div>
+
+            <div id="weapons-tab" class="tab-content">
+                <div class="search-bar">
+                    <input type="text" id="weapons-search" placeholder="Search weapons..." onkeyup="filterItems('weapons')">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="items-grid" id="weapons-container">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
